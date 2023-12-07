@@ -52,46 +52,44 @@ Setting duplicate number which changes gamestyle of entering numbers.
 Pure guess mode which drastically change gameplan as explained [here.](#pure-guess)
 
 <figure>
-  <img src="./demo/interface_6.png" alt="game-settings" width="800" height="450"/>
+  <img src="./demo/interface_6.png" alt="game-settings" width="700" height="450"/>
   <figcaption><i>Settings page</i></figcaption>
 </figure>
-
-*Settings page*
 
 ## Demonstration
 
 <figure>
-  <img src="./demo/interface_2.png" alt="demonstrate-2" width="800" height="450"/>
+  <img src="./demo/interface_2.png" alt="demonstrate-2" width="700" height="450"/>
   <figcaption><i>Default main game</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_7.png" alt="demonstrate-7" width="800" height="450"/>
+  <img src="./demo/interface_7.png" alt="demonstrate-7" width="700" height="450"/>
   <figcaption><i>Default main game with assisting number on 3 digits</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_1.png" alt="demonstrate-1" width="800" height="450"/>
+  <img src="./demo/interface_1.png" alt="demonstrate-1" width="700" height="450"/>
   <figcaption><i>Infomation of game, which is on rightside of page as (i)</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_3.png" alt="demonstrate-3" width="800" height="450"/>
+  <img src="./demo/interface_3.png" alt="demonstrate-3" width="700" height="450"/>
   <figcaption><i>Players submit answer and show the result</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_8.png" alt="demonstrate-8" width="800" height="450"/>
+  <img src="./demo/interface_8.png" alt="demonstrate-8" width="700" height="450"/>
   <figcaption><i>The result in Pure guess mode</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_4.png" alt="demonstrate-4" width="800" height="450"/>
+  <img src="./demo/interface_4.png" alt="demonstrate-4" width="700" height="450"/>
   <figcaption><i>Player gets all number digit correct</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_5.png" alt="demonstrate-5" width="800" height="450"/>
+  <img src="./demo/interface_5.png" alt="demonstrate-5" width="700" height="450"/>
   <figcaption><i>Player cannot get all number digit correct in time limit</i></figcaption>
 </figure>
 
