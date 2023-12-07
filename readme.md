@@ -21,7 +21,9 @@ When a player joins the game, it starts when the user clicks or presses a number
 
 Press the **ENTER** button when player fills in all the digits; the result will be displayed in the following colors.
 
-![screen-show](./demo/screen-1.png)
+<figure>
+  <img src="./demo/screen-1.png" alt="screen-show" width="700" height="250"/>
+</figure>
 
 The colors when reveals in each digit are.
 
@@ -40,7 +42,9 @@ If you lose, players can retry to select numbers freely without a time limit and
 
 Player can freely guess number without any guidance, when all text are **WHITE!**
 
-![screen-show-pure-guess](./demo/screen-2.png)
+<figure>
+  <img src="./demo/screen-2.png" alt="screen-show-pure-guess" width="700" height="250"/>
+</figure>
 
 Trust you instincts and sixth sense to discover the correct digit and numbers!
 Seek out this mode and various settings by clicking **SETTINGS** button.
@@ -52,44 +56,44 @@ Setting duplicate number which changes gamestyle of entering numbers.
 Pure guess mode which drastically change gameplan as explained [here.](#pure-guess)
 
 <figure>
-  <img src="./demo/interface_6.png" alt="game-settings" width="700" height="450"/>
+  <img src="./demo/interface_6.png" alt="game-settings" width="700" height="350"/>
   <figcaption><i>Settings page</i></figcaption>
 </figure>
 
 ## Demonstration
 
 <figure>
-  <img src="./demo/interface_2.png" alt="demonstrate-2" width="700" height="450"/>
+  <img src="./demo/interface_2.png" alt="demonstrate-2" width="700" height="350"/>
   <figcaption><i>Default main game</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_7.png" alt="demonstrate-7" width="700" height="450"/>
+  <img src="./demo/interface_7.png" alt="demonstrate-7" width="700" height="350"/>
   <figcaption><i>Default main game with assisting number on 3 digits</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_1.png" alt="demonstrate-1" width="700" height="450"/>
+  <img src="./demo/interface_1.png" alt="demonstrate-1" width="700" height="350"/>
   <figcaption><i>Infomation of game, which is on rightside of page as (i)</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_3.png" alt="demonstrate-3" width="700" height="450"/>
+  <img src="./demo/interface_3.png" alt="demonstrate-3" width="700" height="350"/>
   <figcaption><i>Players submit answer and show the result</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_8.png" alt="demonstrate-8" width="700" height="450"/>
+  <img src="./demo/interface_8.png" alt="demonstrate-8" width="700" height="350"/>
   <figcaption><i>The result in Pure guess mode</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_4.png" alt="demonstrate-4" width="700" height="450"/>
+  <img src="./demo/interface_4.png" alt="demonstrate-4" width="700" height="350"/>
   <figcaption><i>Player gets all number digit correct</i></figcaption>
 </figure>
 
 <figure>
-  <img src="./demo/interface_5.png" alt="demonstrate-5" width="700" height="450"/>
+  <img src="./demo/interface_5.png" alt="demonstrate-5" width="700" height="350"/>
   <figcaption><i>Player cannot get all number digit correct in time limit</i></figcaption>
 </figure>
 
