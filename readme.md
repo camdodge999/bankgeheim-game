@@ -28,7 +28,7 @@ The colors when reveals in each digit are.
 * 🟢 <span style="color:green;">**GREEN**</span> - Right number and right digit.
 * 🟡 <span style="color:yellow;">**YELLOW**</span> - Right number but wrong digit.
 * 🔴 <span style="color:red;">**RED**</span> - The number does not exist.
-* ⚪️ **WHITE** - Player input digit screen or [Pure Guess mode*.](#pure-gues)
+* ⚪️ **WHITE** - Player input digit screen or [Pure Guess mode*.](#pure-guess)
 
 Press **<- (BACKSPACE)**, **- (MINUS)**, or **DELETE** when the player has submitted the answer to retake the numbers and correct any mistakes that match the intended solution.
 
