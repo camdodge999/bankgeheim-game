@@ -7,7 +7,7 @@ const infoDisplay = () => {
     ['green', 'yellow', 'red'].forEach((color, index) => {
         createNElements('.result', `${2 * index}${2 * index + 1}`, color, 1);
     });
-    ['green', 'yellow', 'red'].forEach((color, index) => {
+    for (let index = 0; index < 2; index++){
         createNElements('.user-number', `${2 * index}${2 * index + 1}`, 'white', 1);
     });
 }
