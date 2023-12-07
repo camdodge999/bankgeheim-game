@@ -69,10 +69,13 @@ Pure guess mode which drastically change gameplan as explained [here.](#pure-gue
 <img src="./demo/interface_3.png" alt="demonstrate-3" width="800" height="450" />
 *Players submit answer and show the result*
 
+<img src="./demo/interface_8.png" alt="demonstrate-8" width="800" height="450" />
+*The result in Pure guess mode*
+
 <img src="./demo/interface_4.png" alt="demonstrate-4" width="800" height="450" />
 *Player gets all number digit correct*
 
-<img src="./demo/interface_5.png" alt="demonstrate-5" width="300" height="200" />
+<img src="./demo/interface_5.png" alt="demonstrate-5" width="800" height="450" />
 *Player cannot get all number digit correct in time limit*
 
 ## Design concept 
