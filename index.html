@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankGeheim</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Reveal when game times out -->
+    <div class="left set-button">
+      <button class="after-btn" id="reveal" style="display: none">
+        REVEAL
+      </button>
+      <button
+        class="after-btn"
+        id="continue"
+        onclick="window.location.href='index.html'"
+        style="display: none"
+      >
+        CONTINUE
+      </button>
+    </div>
+
+    <!-- The main of game control -->
+    <div class="pad">
+      <div class="wire-3">
+        <!-- wiring decoration -->
+        <div class="wiring">
+          <div class="wire red"></div>
+          <div class="wire orange"></div>
+          <div class="wire blue"></div>
+          <div class="wire black"></div>
+        </div>
+        <div class="wiring">
+          <div class="wire red"></div>
+          <div class="wire orange"></div>
+          <div class="wire blue"></div>
+          <div class="wire black"></div>
+        </div>
+        <div class="wiring">
+          <div class="wire red"></div>
+          <div class="wire orange"></div>
+          <div class="wire blue"></div>
+          <div class="wire black"></div>
+        </div>
+      </div>
+      <section class="screen">
+        <div class="timer">
+          <!-- tilde(~) as shown as inactive 8 number in 14 digital segment from:https://www.cdnfonts.com/dseg14-classic.font -->
+          <!-- show as minute : seconds . tenth of seconds -->
+          <span>~~</span> : <span>~~</span> . <span>~</span>
+        </div>
+        <div class="result">
+          <!-- shown as digit of numbers -->
+          <span>~</span><span>~</span><span>~</span><span>~</span><span>~</span
+          ><span>~</span>
+        </div>
+        <div class="user-number">
+          <span>~</span><span>~</span><span>~</span><span>~</span><span>~</span
+          ><span>~</span>
+        </div>
+      </section>
+      <form action="index.html" class="game-settings" style="display: none">
+        <header class="label-time">
+          <label for="minutes"><h6>Mins</h6></label
+          ><label for="seconds"><h6>Secs</h6></label>
+        </header>
+        <div class="time-limit">
+          <label for=""><h4>TIME LIMIT</h4></label>
+          <input
+            type="text"
+            maxlength="2"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0, 2)"
+            id="minutes"
+            value="0"
+            name="minutes"
+          />
+          :
+          <input
+            type="text"
+            maxlength="2"
+            oninput="this.value=this.value.replace(/[^1-5][0-9]/,'').substring(0, 2)"
+            id="seconds"
+            value="0"
+            name="seconds"
+          />
+        </div>
+        <div class="assist-digit">
+          <label for="digit"
+            ><h4>ASSISTING DIGITS</h4>
+            <p>which reduces difficulty <br />(max 3 digits)</p></label
+          >
+          <input
+            type="text"
+            maxlength="1"
+            oninput="this.value=this.value.replace(/[^0-3]/g,'');"
+            id="assist-digits"
+            value="0"
+            name="digit"
+          />
+        </div>
+        <div class="duplicate-number">
+          <h4>DUPLICATE NUMBER</h4>
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              name="duplicate-number"
+              id="duplicate-number"
+              value="true"
+            />
+            <span class="indicator"></span>
+          </label>
+        </div>
+        <div class="pure-guess">
+          <label for="pure-guess"
+            ><h4>PURE GUESS</h4>
+            <p>You don't know all hints <br />until times up!</p>
+          </label>
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              name="pureguess"
+              id="pure-guess"
+              value="true"
+            />
+            <span class="indicator"></span>
+          </label>
+        </div>
+        <h4>AFTER PRESS "DONE" <br />GAME WILL REFRESHED</h4>
+        <button>DONE</button>
+      </form>
+      <section class="game-info" style="display: none">
+        <h5 style="text-align: center;">WELCOME TO BANKGEHEIM!</h5>
+        <h6>
+          WHAT IF PASSWORD HAVE A HINT!
+          <br /><br />THIS GAME INSPIRED FROM <i>BANKGEHEIM</i> GAME SHOW
+          THAILAND VERSION KNOWN AS (ตู้ซ่อนเงิน), WHICH AIRED IN 2007.
+        </h6>
+        <h5>HOW TO PLAY</h5>
+        <h6>
+          PRESS NUMBER BUTTON 0-9 TO CREATE 6-DIGIT IN TIME LIMIT, THEN<br />SUBMIT
+          YOUR ANSWER BY PRESSING <strong>'ENTER'</strong> BUTTON. <br />AFTER
+          SUBMIT, THE RESULT ON EACH DIGIT WILL BE DISPLAYED IN COLORS.
+        </h6>
+        <section class="screen">
+          <div class="result">
+            <!-- created by jQuery as 1 2 3 4 5 6 -->
+          </div>
+        </section>
+        <h6>
+          <strong style="color: green">GREEN</strong> - RIGHT NUMBER AND RIGHT
+          DIGIT <br />
+          <strong style="color: #aaaa00">YELLOW</strong> - RIGHT NUMBER BUT
+          WRONG DIGIT <br />
+          <strong style="color: red">RED</strong> - WRONG NUMBER<br /><br />
+          WINNING THIS GAME IS MAKING ALL DIGITS ON SCREEN GOES ALL
+          <strong style="color: green">GREEN</strong> WITHIN TIME LIMIT. YOU
+          WILL LOSE WHEN YOU CAN'T CRACK PASSWORD IN TIME.
+        </h6>
+        <h6>
+          IF YOU TYPING WRONG NUMBER OR GETTING SUBMITTED, USE
+          <!-- (<-) ICON -->
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 47 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              background-color: #919191;
+              padding: 0.25rem;
+              border-radius: 0.5rem;
+              align-self: center;
+            "
+          >
+            <path
+              d="M4 15.8214H47M4 15.8214L20.812 29M4 15.8214L20.812 2"
+              stroke="white"
+              stroke-width="5"
+            />
+          </svg>
+          OR PRESS <br /><strong>"." "BACKSPACE" "DELETE"</strong> OR
+          <strong>"-"</strong><br />
+          TO RESET ANSWER AND CRACKS AGAIN.<br />
+        </h6>
+        <h5>PURE GUESS MODE</h5>
+
+        <h6>
+          WELCOME TO <strong>PURE GUESS</strong> MODE! 
+        </h6>USERS CAN FREELY GUESS
+          NUMBERS WITHOUT ANY GUIDANCE, WHEN ALL TEXT ARE <strong style="color:whitesmoke; text-shadow: 0px 0px 3px black">WHITE!</strong>
+        <section class="screen">
+          <div class="user-number">
+            <!-- created by jQuery as 1 2 3 4 5 6 -->
+          </div>
+        </section>
+        <h6>
+          TRUST YOUR INSTINCTS AND SIXTH SENSE TO DISCOVER THE CORRECT DIGITS
+          AND NUMBERS! <br /><br />YOU CAN SEEK OUT THIS MODE AND VARIOUS
+          SETTING TO ASSIST BY CLICKING
+          <!-- SETTINGS ICON -->
+          <img
+            style="
+              background-color: #919191;
+              height: 30px;
+              padding:5px;
+              border-radius: 0.5rem;
+            "
+            src="/asset/settings.png"
+            alt=""
+            srcset=""
+          />
+          BUTTON. <br /><br />GOOD LUCK, AND MAY YOU HAVE A FORTUNATE GUESSING
+          EXPERIENCE!
+        </h6>
+
+        <button onclick="window.location.href='index.html'">CONTINUE</button>
+        <h5 style="text-align: center; padding-bottom: 1rem;">CREATED BY <a href="https://github.com/camdodge999/bankgeheim-game" style="text-decoration: none; color:green">
+          CAMDODGE999</a></h5>
+      </section>
+      <section class="user-button">
+        <div class="number-btn-col">
+          <button class="insert-btn" id="7">7</button>
+          <button class="insert-btn" id="8">8</button>
+          <button class="insert-btn" id="9">9</button>
+          <button class="insert-btn command" id="Backspace">
+            <svg
+              width="47"
+              height="31"
+              viewBox="0 0 47 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 15.8214H47M4 15.8214L20.812 29M4 15.8214L20.812 2"
+                stroke="white"
+                stroke-width="5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="number-btn-col">
+          <button class="insert-btn" id="4">4</button>
+          <button class="insert-btn" id="5">5</button>
+          <button class="insert-btn" id="6">6</button>
+          <button class="insert-btn extended command" id="Enter">ENTER</button>
+        </div>
+        <div class="number-btn-col">
+          <button class="insert-btn" id="1">1</button>
+          <button class="insert-btn" id="2">2</button>
+          <button class="insert-btn" id="3">3</button>
+        </div>
+        <div class="number-btn-col">
+          <button class="insert-btn extended" id="0">0</button>
+        </div>
+      </section>
+
+      <!-- showing an endgame event -->
+      <section class="after" style="display: none">
+        <div class="text">
+          <h4>YOU CORRECT</h4>
+          <h4>{x} DIGITS</h4>
+        </div>
+        <div class="set-button">
+          <button
+            class="after-btn"
+            id="retry"
+            onclick="window.location.href='#'"
+          >
+            RETRY
+          </button>
+          <button
+            class="after-btn"
+            id="continue"
+            onclick="window.location.href='index.html'"
+          >
+            CONTINUE
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- right side of webpage -->
+    <div class="right">
+      <button class="" id="info">i</button>
+
+      <button id="settings">
+        <img src="/asset/settings.png" alt="" srcset="" />
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
