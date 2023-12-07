@@ -57,22 +57,22 @@ Pure guess mode which drastically change gameplan as explained [here.](#pure-gue
 
 ## Demonstration
 
-![screen-show](./demo/interface_2.png =800x450)
+<img src="./demo/interface_2.png" alt="demonstrate-2" width="800" height="450" />
 *Default main game*
 
-![screen-show](./demo/interface_7.png =800x450)
+<img src="./demo/interface_7.png" alt="demonstrate-7" width="800" height="450" />
 *Default main game with assisting number on 3 digits*
 
-![screen-show](./demo/interface_1.png =800x450)
+<img src="./demo/interface_1.png" alt="demonstrate-1" width="800" height="450" />
 *Infomation of game, which is on rightside of page as (i)*
 
-![screen-show](./demo/interface_3.png =800x450)
+<img src="./demo/interface_3.png" alt="demonstrate-3" width="800" height="450" />
 *Players submit answer and show the result*
 
-![screen-show](./demo/interface_4.png =800x450)
+<img src="./demo/interface_4.png" alt="demonstrate-4" width="800" height="450" />
 *Player gets all number digit correct*
 
-![screen-show](./demo/interface_5.png =800x450)
+<img src="./demo/interface_5.png" alt="demonstrate-5" width="300" height="200" />
 *Player cannot get all number digit correct in time limit*
 
 ## Design concept 
